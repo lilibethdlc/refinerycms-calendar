@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Calendar::Admin::EventCategoriessController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.calendar_admin_event_categories_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_calendar_admin_event_category_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Calendar::Admin::EventCategoriesController.sortable? && ::Refinery::Calendar::Event.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "EventCategories"),
+                 refinery.calendar_admin_event_categories_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "EventCategories"),
+                 refinery.calendar_admin_event_categories_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

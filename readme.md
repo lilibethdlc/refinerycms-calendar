@@ -1,4 +1,4 @@
-# Events engine for Refinery CMS.
+# Calendar extension for Refinery CMS.
 
 * Venue Details
 * Ticket pricing & Link
@@ -15,7 +15,7 @@
 
 Using Rails 3 / Bundler Gemfile:
 
-    gem 'refinerycms-calendar', '~>1.1.0'
+    gem 'refinerycms-calendar', '~>2.0.0'
 
 bash:
 
@@ -25,16 +25,14 @@ bash:
 
     rake db:migrate
 
-
-
 Maintained by [joemsak](http://github.com/joemsak)
 
-## TODO for 1.1.1:
+## TODO for 2.1.1:
 
 * Controller & view template refactoring
 
 
-## TODO for 1.2 Release:
+## TODO for 2.2 Release:
 
 * Import events from Facebook fan page?
 * JS datepicker in admin backend

@@ -1,7 +1,7 @@
 class CreateEvents < ActiveRecord::Migration
 
-  def self.up
-    create_table :events do |t|
+  def up
+    create_table :refinery_events do |t|
       t.string :title
       t.datetime :start_at
       t.datetime :end_at
@@ -16,18 +16,19 @@ class CreateEvents < ActiveRecord::Migration
 
       t.timestamps
     end
-
-    add_index :events, :id
-
-    load(Rails.root.join('db', 'seeds', 'events.rb'))
   end
 
-  def self.down
-    UserPlugin.destroy_all({:name => "events"})
+  def down
+    if defined?(::Refinery::UserPlugin)
+      ::Refinery::UserPlugin.destroy_all({:name => "refinerycms-calendar"})
+    end
 
-    Page.delete_all({:link_url => "/events"})
+    if defined?(::Refinery::Page)
+      ::Refinery::Page.delete_all({:link_url => "/events/events"})
+    end
 
-    drop_table :events
+    drop_table :refinery_events
+
   end
 
 end
