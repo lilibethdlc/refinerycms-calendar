@@ -41,6 +41,7 @@ en:
             delete: Remove this event category forever
       events:
         index:
+          events: Events
           archives: Archives
           featured_events: Featured Events
           all_events: All Events
