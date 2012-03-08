@@ -12,7 +12,6 @@ class CreateEvents < ActiveRecord::Migration
       t.text :description
       t.boolean :featured
       t.integer :image_id
-      t.integer :position
 
       t.timestamps
     end
