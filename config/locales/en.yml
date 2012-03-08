@@ -11,10 +11,10 @@ en:
         events:
           actions:
             create_new: Add New Event
-            reorder: Reorder Calendar
-            reorder_done: Done Reordering Calendar
+            reorder: Reorder Events
+            reorder_done: Done Reordering Events
           records:
-            title: Calendar
+            title: Events
             sorry_no_results: Sorry! There are no results found.
             no_items_yet: There are no Events yet. Click "Add New Event" to add your first event.
             manage_categories: Manage Categories
@@ -42,10 +42,14 @@ en:
       events:
         index:
           archives: Archives
+          featured_events: Featured Events
+          all_events: All Events
         show:
           other: Other Events
         sidebar:
           other: Other Events
+          categories: Categories
+          archives: Archives
   activerecord:
     attributes:
       'refinery/calendar/event':
