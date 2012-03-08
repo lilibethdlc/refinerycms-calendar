@@ -13,7 +13,11 @@ Refinery::Core::Engine.routes.draw do
   # Admin routes
   namespace :calendar, path: '' do
     namespace :admin, path: 'refinery' do
-      resources :events, except: :show
+      resources :events, except: :show do
+        collection do
+          post :update_positions
+        end
+      end
       resources :event_categories, except: :show
     end
   end
