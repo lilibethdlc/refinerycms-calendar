@@ -13,7 +13,7 @@
 	<aside class="sidebar_module categories">
 		<h2><%= t('.categories') %></h2>
 		<% @event_categories.each do |category| -%>
-		<%= link_to category.name, refinery.calendar_category_events_path(category) %>
+		<%= link_to category.name, refinery.category_calendar_events_path(category) %>
 		<% end -%>
 	</aside><!-- .categories -->
 

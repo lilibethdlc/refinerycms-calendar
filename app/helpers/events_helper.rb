@@ -35,7 +35,7 @@ module EventsHelper
       count =::Refinery::Calendar::Event.by_archive(Time.parse(l)).size
       text = t("date.month_names")[month.to_i] + " #{year} (#{count})"
       html << "<li>"
-      html << link_to(text, archive_events_path(:year => year, :month => month))
+      html << link_to(text, refinery.archive_calendar_events_path(:year => year, :month => month))
       html << "</li>"
     end
     super_old_links.each do |l|
