@@ -3,7 +3,7 @@ module Refinery
     module Admin
       class EventCategoriesController < ::Refinery::AdminController
 
-        crudify 'refinery/calendar/event_category', :xhr_paging => true
+        crudify 'refinery/calendar/event_category', xhr_paging: true
 
       end
     end
