@@ -13,11 +13,12 @@ module Refinery
             :controller => 'refinery/calendar/admin/events',
             :action => 'index'
           }
+          plugin.menu_match = %r{refinery/calendar/event(.+?)?$}
           plugin.pathname = root
           plugin.activity = {
             :class_name => :'refinery/calendar/event'
           }
-          
+
         end
       end
 
