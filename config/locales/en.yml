@@ -52,6 +52,11 @@ en:
           other: Other Events
           categories: Categories
           archives: Archives
+        event:
+          starts: Starts
+          ends: Ends
+          location: Location
+          address: Address
   activerecord:
     attributes:
       'refinery/calendar/event':
