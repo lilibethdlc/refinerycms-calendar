@@ -1,6 +1,6 @@
 module Refinery
   module Calendar
-    class EventCategoriesController < ApplicationController
+    class EventCategoriesController < ::ApplicationController
       helper [:events, :event_categories]
 
       def show
