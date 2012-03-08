@@ -6,7 +6,12 @@
   <% end %>
   <li>
     <%= link_to t('.create_new'), refinery.new_calendar_admin_event_path,
-                 :class => "add_icon" %>
+        :class => "add_icon" %>
+  </li>
+
+  <li>
+    <%= link_to t('.manage_categories'), admin_event_categories_url,
+        :class => "edit_icon" %>
   </li>
 <% if !searching? && ::Refinery::Calendar::Admin::EventsController.sortable? && ::Refinery::Calendar::Event.any? %>
   <li>
