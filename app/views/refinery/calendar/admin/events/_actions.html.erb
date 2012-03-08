@@ -10,7 +10,7 @@
   </li>
 
   <li>
-    <%= link_to t('.manage_categories'), admin_event_categories_url,
+    <%= link_to t('.manage_categories'), refinery.calendar_admin_event_categories_path,
         :class => "edit_icon" %>
   </li>
 <% if !searching? && ::Refinery::Calendar::Admin::EventsController.sortable? && ::Refinery::Calendar::Event.any? %>
