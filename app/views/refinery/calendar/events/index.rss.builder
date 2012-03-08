@@ -3,7 +3,7 @@ xml.rss :version => "2.0" do
   xml.channel do
     xml.title ::Refinery::Core.config.site_name
     xml.description ::Refinery::Core.config.site_name + " " + t('.events')
-    xml.link events_url
+    xml.link refinery.calendar_url
 
     (@featured_events | @events).each do |event|
       xml.item do
