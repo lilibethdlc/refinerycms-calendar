@@ -11,7 +11,7 @@ end
 url = "/events"
 if defined?(::Refinery::Page) && ::Refinery::Page.where(:link_url => url).empty?
   page = ::Refinery::Page.create(
-    :title => 'Calendar',
+    :title => 'Events',
     :link_url => url,
     :deletable => false,
     :menu_match => "^#{url}(\/|\/.+?|)$"
