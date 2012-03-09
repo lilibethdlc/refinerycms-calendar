@@ -4,12 +4,12 @@
 
 <% content_for :body_content_left do %>
   <div id="events">
-		<%= render :partial => 'events/event', :collection => @event_category.events, :locals => { :category => true } %>
+		<%= render partial: '/refinery/calendar/events/event', collection: @event_category.events, locals: { category: true } %>
 	</div><!-- #events -->
 <% end %>
 
-<%= render 'sidebar' %>
+<%= render '/refinery/calendar/events/sidebar' %>
 
-<%= render :partial => "/refinery/content_page" %>
+<%= render '/refinery/content_page' %>
 
 <% content_for :stylesheets, stylesheet_link_tag('refinerycms-events') %>
